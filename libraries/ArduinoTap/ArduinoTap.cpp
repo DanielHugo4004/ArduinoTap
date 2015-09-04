@@ -33,6 +33,21 @@ static Stream *_failure_out = &Cerr;
 #endif
 
 
+void setTapOutStream(Stream &outstream) {
+     _out = &outstream;
+     return;
+}
+
+void setTapFailStream(Stream& failstream) {
+     _failure_out = &failstream;
+     return;
+}
+
+void setTapStreams(Stream &outstream, Stream& failstream) {
+     _out = &outstream;
+     _failure_out = &failstream;
+}
+
 int plan() {
     return _expected_tests;
 }

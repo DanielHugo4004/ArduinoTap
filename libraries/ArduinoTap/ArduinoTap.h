@@ -29,6 +29,9 @@ class Stream
 };
 #endif
 
+extern void setTapOutStream(Stream& outstream);
+extern void setTapFailStream(Stream& failstream);
+extern void setTapStreams(Stream &outstream, Stream& failstream);
 
 extern void plan(int nb);
 extern int plan();
